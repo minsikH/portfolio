@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>황민식 포트폴리오</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/info.css" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <ul>
+        <li><a href="./index.html" id="nav_home">HOME</a></li>
+      </ul>
+    </header>
+
+    <div id="wrap">
+      <div class="section inner_02" id="section3">
+        <p class="title">PAGE INFO</p>
+
+        <div class="portfolio_area">
+          <div class="pick_tap">
+            <ul>
+              <li class="tab tab1"><a href="#">유기 펫 메이트</a></li>
+              <li class="tab tab2"><a href="#">수성아트피아</a></li>
+              <li class="tab tab3"><a href="#">GETEASY</a></li>
+            </ul>
+          </div>
+
+          <div class="tab_content" id="tab1">
+            <section class="page1">
+              <img src="img/pet/img_01.png" alt="메인화면 이미지" />
+              <div class="portfolio_text">
+                <h3>1. 메인 &lpar;입양&rpar;</h3>
+                <ul>
+                  <li>
+                    1&rpar; 필터링 기능 :
+                    <span
+                      >-useState와 useEffect 훅을 활용하여 API에서 데이터를
+                      가져와 필요한 상태를 관리하고, 검색어에 따라 데이터를
+                      동적으로 필터링합니다.</span
+                    >
+                  </li>
+                  <li>
+                    2&rpar; 공공데이터 API :
+                    <span
+                      >-query 상태가 변경될 때마다 API 요청을 보내어 해당 필터에
+                      맞는 강아지 데이터를 가져온 후, 가져온 데이터는 petList에
+                      저장되며, 이를 Content 컴포넌트에 props로 전달하여 화면에
+                      출력합니다.</span
+                    >
+                  </li>
+                  <li>
+                    3&rpar; 페이지네이션 :
+                    <span
+                      >-Content 컴포넌트에서 petList를 받아와서 페이지네이션
+                      기능을 구현합니다.</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            <section class="page2">
+              <img src="img/pet/img_02.png" alt="메인 디테일 이미지" />
+              <div class="portfolio_text">
+                <h3>1-1. 입양 -> 디테일 페이지</h3>
+                <ul>
+                  <li>
+                    1&rpar; 공공데이터 API :
+                    <span
+                      >-useParams 훅을 사용하여 URL에서 동물의 고유 ID(id)를
+                      가져오고, 이를 통해 Redux에서 해당 동물의 상세 정보를
+                      가져오는 dispatch(petAction.getPetDetail(id))를
+                      호출합니다.</span
+                    >
+                  </li>
+                  <li>
+                    2&rpar; 카카오맵API :
+                    <span
+                      >-동물을 보호하는 보호소의 정보를 표시하고, 이 정보를
+                      바탕으로 Kakao 컴포넌트를 통해 보호소 위치를 지도에서
+                      확인할 수 있습니다.</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            <section class="page3">
+              <img src="img/pet/img_03.png" alt="커뮤니티 이미지" />
+              <div class="portfolio_text">
+                <div>
+                  <h3>2. 커뮤니티 &lpar;자유게시판&rpar;</h3>
+                  <ul>
+                    <li>
+                      1&rpar; 자유게시판 :
+                      <span
+                        >-파이어베이스와 연동하여 documents 배열을 매핑하여 각
+                        게시물의 제목, 작성자, 작성일을 표시합니다.</span
+                      >
+                    </li>
+                    <li>
+                      2&rpar; 디테일 페이지 :
+                      <span
+                        >-각 게시물은 클릭 가능하며, 클릭 시 handleDetailClick
+                        함수가 호출되어 해당 게시물의 디테일 페이지로
+                        이동합니다.</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3>2. 커뮤니티 &lpar;자주묻는질문&rpar;</h3>
+                  <ul>
+                    <li>
+                      1&rpar; 자주묻는질문 :
+                      <span
+                        >-질문을 클릭할 때마다 toggleAnswer 함수가 호출되어 해당
+                        질문의 답변을 토글합니다.</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+            <section class="page8">
+              <img src="img/pet/img_08.png" alt="커뮤니티 디테일 이미지" />
+              <div class="portfolio_text">
+                <div>
+                  <h3>2-1. 커뮤니티 디테일 페이지</h3>
+                  <ul>
+                    <li>
+                      1&rpar; 파이어베이스 :
+                      <span
+                        >-파이어베이스와 연동하여 실시간으로 글 수정,삭제 /
+                        댓글쓰기,수정,삭제를 관리합니다.</span
+                      >
+                      <span
+                        >-파이어베이스와 연동하여 본인의 글과 댓글만 수정 또는
+                        삭제가 가능합니다.</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+            <section class="page9">
+              <img src="img/pet/img_09.png" alt="커뮤니티 글쓰기 이미지" />
+              <div class="portfolio_text">
+                <div>
+                  <h3>2-2. 커뮤니티 글쓰기</h3>
+                  <ul>
+                    <li>
+                      1&rpar; 파이어베이스 :
+                      <span
+                        >-파이어베이스와 연동하여 실시간으로 글작성을
+                        관리합니다.</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+            <section class="page4">
+              <img src="img/pet/img_04.png" alt="보호소 이미지" />
+              <div class="portfolio_text">
+                <h3>3. 보호소</h3>
+                <ul>
+                  <li>
+                    1&rpar; 카카오맵API :
+                    <span
+                      >-선택된 보호소에 따라 해당 보호소의 동물 수를 계산하고,
+                      ShelterCard 컴포넌트를 통해 보호소 정보와 관련된 동물 수를
+                      표시합니다.</span
+                    >
+                  </li>
+                  <li>
+                    2&rpar; 공공데이터 API :
+                    <span
+                      >-useDispatch와 useSelector를 사용하여 Redux 상태 관리를
+                      설정하고, petAction.getAllShelters()를 통해 모든 보호소
+                      정보를 가져옵니다.</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <section class="page5">
+              <img src="img/pet/img_05.png" alt="보호소 디테일 이미지" />
+              <div class="portfolio_text">
+                <h3>3-1. 보호소 -> 디테일 페이지</h3>
+                <ul>
+                  <li>
+                    1&rpar; 공공데이터 API :
+                    <span
+                      >-petAction.getAllShelters()를 호출하여 Redux의 상태를
+                      업데이트하고, 모든 보호소 정보를 가져옵니다.</span
+                    >
+                  </li>
+                  <li>
+                    2&rpar; 카카오맵API :
+                    <span
+                      >-Kakao 컴포넌트를 사용하여 Kakao 지도 API를 통해 선택된
+                      보호소의 위치를 표시합니다.</span
+                    >
+                  </li>
+                  <li>
+                    3&rpar; 공공데이터 API :
+                    <span
+                      >-선택된 보호소의 careAddr을 기반으로 allPetsList에서 해당
+                      보호소의 동물 목록을 필터링하여 가져옵니다.</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <section class="page6">
+              <img src="img/pet/img_06.png" alt="로그인 이미지" />
+              <div class="portfolio_text">
+                <h3>4. 로그인</h3>
+                <ul>
+                  <li>
+                    1&rpar; 파이어베이스 :
+                    <span
+                      >-useLogin: useLogin 훅을 사용하여 로그인 기능을
+                      가져옵니다. 이 훅은 login 함수를 제공하여 파이어베이스를
+                      통해 사용자가 입력한 이메일과 비밀번호로 로그인을
+                      처리합니다.</span
+                    >
+                  </li>
+                  <li>
+                    2&rpar; 조건부 렌더링 :
+                    <span>
+                      -user의 로그인 상태를 통해 조건부로 로그인 버튼과 로그아웃
+                      버튼을 렌더링합니다.</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <section class="page7">
+              <img src="img/pet/img_07.png" alt="회원가입 이미지" />
+              <div class="portfolio_text">
+                <h3>5. 회원가입</h3>
+                <ul>
+                  <li>
+                    1&rpar; 파이어베이스 :
+                    <span
+                      >- useSignup 훅을 통해 signup 함수를 가져와서 사용합니다.
+                      회원가입 정보를 입력하고 제출할 때 handleSubmit 함수가
+                      호출되어 signup(email, password, displayName)을 실행하고,
+                      회원가입이 성공적으로 완료되면 파이어베이스에
+                      등록합니다.</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </div>
+          <div class="tab_content" id="tab2">
+            <section class="page1">
+              <img src="img/ssartpia/img_01.png" alt="메인화면 이미지" />
+              <div class="portfolio_text">
+                <h3>1. 메인</h3>
+                <ul>
+                  <li>
+                    1&rpar; 공연,전시,아카데미 탭 :
+                    <span
+                      >-fetch를 사용하여 data.json 파일에서 데이터를
+                      가져옵니다.</span
+                    >
+                    <span
+                      >-현재 날짜와 시간과 비교하여 공연과 전시를 "중", "예정",
+                      "완료"로 분류한 뒤 해당 월에 슬라이드로 추가합니다.</span
+                    >
+                    <span
+                      >-해당 항목을 클릭하면 detail.html 페이지로 이동하도록
+                      a태그를 사용합니다. 이때 href 속성에 항목의 id 값을
+                      포함시켜 URL을 동적으로 생성합니다.
+                    </span>
+                  </li>
+                  <li>
+                    2&rpar; NOTICE 공지사항 :
+                    <span
+                      >-data.json 파일에서 "공지사항" 유형의 항목을 필터링하여
+                      최신 3개 항목을 날짜 순서대로 정렬하여 표시합니다.</span
+                    >
+                    <span
+                      >-해당 항목을 클릭하면 해당 페이지로 이동할 때 항목의 고유
+                      식별자인 id 값을 URL에 쿼리 매개변수로 포함시켜 전달하여
+                      해당 아코디언 메뉴를 오픈합니다.
+                    </span>
+                  </li>
+                  <li>
+                    3&rpar; NEWS 언론보도 :
+                    <span
+                      >-data.json 파일에서 "언론보도" 유형의 항목을 필터링하여
+                      최신 6개 항목을 날짜 순서대로 정렬하여 표시합니다.</span
+                    >
+                    <span
+                      >-해당 항목을 클릭하면 해당 페이지로 이동할 때 항목의 고유
+                      식별자인 id 값을 URL에 쿼리 매개변수로 포함시켜 전달하여
+                      해당 아코디언 메뉴를 오픈합니다.
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            <section class="page2">
+              <div class="swiper main_swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="img/ssartpia/img_04.png" alt="기획공연 이미지" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/ssartpia/img_08.png" alt="기획전시 이미지" />
+                  </div>
+                </div>
+                <div class="swiper-util-box">
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+
+              <div class="portfolio_text">
+                <h3>2. 기획공연, 기획전시</h3>
+                <ul>
+                  <li>
+                    1&rpar; 기획공연, 기획전시 :
+                    <span
+                      >-fetch를 사용하여 data.json 파일에서 데이터를
+                      가져옵니다.</span
+                    >
+                    <span
+                      >-현재 날짜와 시간과 비교하여 공연과 전시를 "중", "예정",
+                      "완료"로 분류한 뒤 순서대로 추가합니다.</span
+                    >
+                    <span
+                      >-한 페이지에 보여질 아이템의 개수를 설정하여
+                      페이지네이션을 직관적으로 구현했습니다.
+                    </span>
+                    <span
+                      >-해당 항목을 클릭하면 detail.html 페이지로 이동하도록
+                      a태그를 사용합니다. 이때 href 속성에 항목의 id 값을
+                      포함시켜 URL을 동적으로 생성합니다.
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <section class="page3">
+              <div class="swiper main_swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img
+                      src="img/ssartpia/img_05.png"
+                      alt=" 공연일정 월간공연 이미지"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="img/ssartpia/img_06.png"
+                      alt=" 공연일정 월간공연 이미지"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="img/ssartpia/img_07.png"
+                      alt=" 공연일정 연간공연 이미지"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="img/ssartpia/img_09.png"
+                      alt=" 전시일정 월간전시 이미지"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="img/ssartpia/img_10.png"
+                      alt=" 전시일정 월간전시 이미지"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="img/ssartpia/img_11.png"
+                      alt=" 전시일정 연간전시 이미지"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-util-box">
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+
+              <div class="portfolio_text">
+                <h3>3. 공연일정, 전시일정</h3>
+                <ul>
+                  <li>
+                    1&rpar; 월간공연, 월간전시 탭 :
+                    <span
+                      >-fetch를 사용하여 data.json 파일에서 데이터를
+                      가져옵니다.</span
+                    >
+
+                    <span
+                      >-현재 날짜와 시간과 비교하여 공연과 전시를 달력의 해당
+                      일에 추가합니다.</span
+                    >
+                    <span
+                      >-해당 항목을 클릭하면 detail.html 페이지로 이동하도록
+                      a태그를 사용합니다. 이때 href 속성에 항목의 id 값을
+                      포함시켜 URL을 동적으로 생성합니다.
+                    </span>
+                    <span
+                      >-필터 조건에 따라 해당 결과를 정렬하여 표시합니다.</span
+                    >
+                  </li>
+                  <li>
+                    2&rpar; 연간공연, 연간전시 탭 :
+                    <span
+                      >-fetch를 사용하여 data.json 파일에서 데이터를
+                      가져옵니다.</span
+                    >
+
+                    <span
+                      >-현재 날짜와 시간과 비교하여 공연과 전시를 달력의 해당
+                      달에 추가합니다.</span
+                    >
+                    <span
+                      >-해당 항목을 클릭하면 detail.html 페이지로 이동하도록
+                      a태그를 사용합니다. 이때 href 속성에 항목의 id 값을
+                      포함시켜 URL을 동적으로 생성합니다.
+                    </span>
+                    <span
+                      >-필터 조건에 따라 해당 결과를 정렬하여 표시합니다.</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <section class="page4">
+              <div class="swiper main_swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="img/ssartpia/img_16.png" alt=" 공연대관 이미지" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/ssartpia/img_17.png" alt=" 전시대관 이미지" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/ssartpia/img_18.png" alt=" 알림마당 이미지" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/ssartpia/img_19.png" alt=" 언론보도 이미지" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="img/ssartpia/img_21.png"
+                      alt=" 1:1고객센터 이미지"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-util-box">
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+
+              <div class="portfolio_text">
+                <h3>4. 공연/전시 대관, 알림마당, 언론보도, 1:1고객센터</h3>
+                <ul>
+                  <li>
+                    1&rpar; 공연/전시 대관, 알림마당, 언론보도, 1:1고객센터 :
+                    <span
+                      >-fetch를 사용하여 data.json 파일에서 데이터를
+                      가져옵니다.</span
+                    >
+                    <span
+                      >-공지와 비공지로 나누어 해당 작성일을 비교하여 순서대로
+                      정렬합니다.</span
+                    >
+                    <span
+                      >-해당 항목을 클릭하면 아코디언 메뉴로 온오프합니다.
+                    </span>
+                    <span
+                      >-필터 조건에 따라 해당 결과를 정렬하여 표시합니다.</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <section class="page5">
+              <div class="swiper main_swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="img/ssartpia/img_02.png" alt=" 검색버튼 이미지" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/ssartpia/img_03.png" alt=" 메뉴버튼 이미지" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="img/ssartpia/img_12.png"
+                      alt=" 디테일페이지 이미지"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/ssartpia/img_13.png" alt=" 수강신청 이미지" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="img/ssartpia/img_14.png"
+                      alt=" 수강신청 디테일 이미지"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/ssartpia/img_15.png" alt=" e-book 이미지" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/ssartpia/img_20.png" alt=" 회원제도 이미지" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="img/ssartpia/img_22.png"
+                      alt=" 아트피아소개 이미지"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/ssartpia/img_23.png" alt=" 오시는길 이미지" />
+                  </div>
+                </div>
+                <div class="swiper-util-box">
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+
+              <div class="portfolio_text">
+                <h3>
+                  5. 검색버튼, 메뉴버튼, 디테일페이지, 수강신청, 수강신청
+                  디테일, e-book, 회원제도, 아트피아소개, 오시는길
+                </h3>
+                <ul>
+                  <li>
+                    1&rpar; 검색버튼, 메뉴버튼, 디테일페이지, 수강신청, 수강신청
+                    디테일, e-book, 회원제도, 아트피아소개, 오시는길 :
+                    <span
+                      >-위 사항들과 기능 동일합니다. &lpar;반응형
+                      포함&rpar;</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </div>
+
+          <!-- 3 -->
+          <div class="tab_content" id="tab3">
+            <section class="page1">
+              <div class="swiper main_swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="img/geteasy/img_01.png" alt=" 메인 이미지" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/geteasy/img_02.png" alt=" 브랜드 이미지" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/geteasy/img_04.png" alt=" 리뉴 이미지" />
+                  </div>
+                </div>
+                <div class="swiper-util-box">
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+
+              <div class="portfolio_text">
+                <h3>1. 메인, 브랜드, 리뉴</h3>
+                <ul>
+                  <li>
+                    1&rpar; 메인, 브랜드, 리뉴 :
+                    <span
+                      >-스와이프: 사용자가 페이지 내에서 다양한 콘텐츠를 탐색할
+                      수 있도록 슬라이드 형식으로 구성된 스와이프 기능을 통해
+                      시각적으로 매끄럽게 전환되는 경험을 제공했습니다.</span
+                    >
+                    <span
+                      >-모달 창: 사용자에게 추가적인 작업을 수행할 수 있도록
+                      모달 창을 통해 일시적으로 화면을 겹쳐 표시하는 방식으로,
+                      사용자가 현재 작업을 중지하지 않고도 필요한 작업을 처리할
+                      수 있도록 했습니다.</span
+                    >
+                    <span
+                      >-탭 메뉴: 사용자가 필요한 정보를 선택적으로 볼 수 있도록
+                      탭 메뉴를 구현했습니다. 각 탭을 클릭하면 해당 섹션이
+                      활성화되어 해당 콘텐츠를 표시하도록 하여 사용자의 접근성과
+                      편의성을 고려했습니다.</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <section class="page2">
+              <div class="swiper main_swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="img/geteasy/img_06.png" alt=" 로그인 이미지" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/geteasy/img_07.png" alt=" 회원가입 이미지" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="img/geteasy/img_08.png"
+                      alt=" 마이페이지 이미지"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-util-box">
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+
+              <div class="portfolio_text">
+                <h3>2. 로그인, 회원가입, 마이페이지</h3>
+                <ul>
+                  <li>
+                    1&rpar; 파이어베이스 :
+                    <span
+                      >-데이터베이스와 연결하여 사용자의 로그인, 구글아이디
+                      로그인, 회원가입 및 마이페이지&lpar;로그아웃&rpar;를
+                      간편하게 구현했습니다.</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <section class="page3">
+              <div class="swiper main_swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img
+                      src="img/geteasy/img_09.png"
+                      alt=" 디테일페이지 이미지"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/geteasy/img_05.png" alt=" 리뷰 이미지" />
+                  </div>
+                </div>
+                <div class="swiper-util-box">
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+
+              <div class="portfolio_text">
+                <h3>3. 디테일 페이지, 리뷰작성</h3>
+                <ul>
+                  <li>
+                    1&rpar; 디테일 페이지 :
+                    <span
+                      >-사용자가 제품과 수량을 조절하면 총 수량과 총 가격을
+                      업데이트하는 기능을 제공합니다.</span
+                    >
+                    <span
+                      >-파이어베이스와 연동하여 제품후기 배열을 매핑하여 각
+                      게시물의 제목, 내용, 작성자, 작성일, 별점을
+                      표시합니다.</span
+                    >
+                    <span
+                      >-파이어베이스와 연동하여 사용자는 자신의 아이디로 작성된
+                      글을 삭제할 수 있습니다.</span
+                    >
+                  </li>
+                  <li>
+                    2&rpar; 리뷰작성 :
+                    <span
+                      >-클릭 시 비 로그인 시 로그인 페이지로 이동하도록 구현되어
+                      있고, 로그인 시 리뷰작성 페이지로 이동하도록 구현되어
+                      있습니다.</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- JS -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/info.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>
